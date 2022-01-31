@@ -23,17 +23,23 @@ public class hangman {
         System.out.println(underscore);
 
 
-        String guess = JOptionPane.showInputDialog("Guess?");
-        if (guess.length()>1){
-            wordguess = guess;
+        for (int g = 0; g < 1000; g++) {
+            String guess = JOptionPane.showInputDialog("Guess?");
 
-        } else {
-            letterguess = guess.charAt(0);
+            if (guess.length() > 1) {
+                wordguess = guess;
 
-        }
+            } else {
+                letterguess = guess.charAt(0);
+                if (guess.charAt(g) == letters[g]) {
+                    System.out.println(guess.charAt(g));
+                }
+                }
+            }
 
         if (wordguess.equals(word)) {
             System.out.println("Conrgrats you win!\n"+"The word was " + word);
+
         }
 
         for (int l = 0; l < word.length(); l++) {
