@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.sql.SQLOutput;
 
 public class hangman {
     public static void main(String[] args) {
@@ -11,6 +10,8 @@ public class hangman {
         int lives = 3;
         int correct = 0;
         char[] letters = new char[word.length()];
+        //skapar variablerna som kommer behövas
+
 
         for (int i = 0; i < word.length(); i++) {
             letters[i] = word.charAt(i);
@@ -23,16 +24,25 @@ public class hangman {
             } else {
                 underscore += "_";
             }
+            //Tittar på längden av ordet och printar ut ett understräck för varje bokstav
+
+
         }
         char[] underscorelist = new char[underscore.length()];
         for (int e = 0; e < underscore.length(); e++) {
             underscorelist[e] = underscore.charAt(e);
         }
+        //Skapar en lista för understräcken så varje understräck kan gämföras enskilt
+
+
         while (lives > 0) {
             System.out.println(underscorelist);
             guess = JOptionPane.showInputDialog("Guess?");
             if (guess.length() > 1) {
                 wordguess = guess;
+                //Tittar om gissningen är en bokstav eller ord-gissning
+
+
                 if (wordguess.equals(word)) {
                     System.out.println("Conrgrats you win!\n" + "The word was " + word);
                     System.exit(0);
@@ -40,48 +50,28 @@ public class hangman {
                     System.out.println("You lose!\n" + "The word was " + word + "\nYou guessed" + wordguess);
                     System.exit(0);
                 }
-            }
+                //Tittar om spelaren har liv kvar och om spelaren har vunnit eller förlorat, sedan avslutar programmet
 
-
-
-
-
-
-
-
-
-
-
-        /*
-
-
-        for (int g = 0; g < 1000; g++) {
-            String guess = JOptionPane.showInputDialog("Guess?");
-
-            if (guess.length() > 1) {
-                wordguess = guess;
 
             } else {
                 letterguess = guess.charAt(0);
-                if (guess.charAt(g) == letters[g]) {
-                    System.out.println(guess.charAt(g));
+                for (int x = 0; x < word.length(); x++) {
+                    if (letterguess == letters[x]) {
+                        underscorelist[x] = letterguess;
+                        correct = 1;
+                    } else {
+                    }
                 }
+                //Tittar om bokstaven finns med i ordet och byter ut rätt understräck vid korrekt gissning
+
+                if (correct == 0) {
+                    lives = lives - 1;
+                    System.out.println("The letter you guessed was incorrect\n" + "you have " + lives + " lives remaining");
+                } else {
+                    correct = 0;
                 }
+                //Tittar om gissningen är fel och tar bort ett liv vid inkorrekt gissning
             }
-
-        if (wordguess.equals(word)) {
-            System.out.println("Conrgrats you win!\n"+"The word was " + word);
-
-        }
-
-        for (int l = 0; l < word.length(); l++) {
-            if (letterguess == letters[l]) {
-                letters[l] = letterguess;
-
-
-            } else {
-
-            }*/
         }
     }
 }
