@@ -24,7 +24,7 @@ public class hangman {
             } else {
                 underscore += "_";
             }
-            //Tittar på längden av ordet och printar ut ett understräck för varje bokstav
+            //Tittar på längden av ordet och printar ut ett understreck för varje bokstav
 
 
         }
@@ -32,7 +32,7 @@ public class hangman {
         for (int e = 0; e < underscore.length(); e++) {
             underscorelist[e] = underscore.charAt(e);
         }
-        //Skapar en lista för understräcken så varje understräck kan gämföras enskilt
+        //Skapar en lista för understrecken så varje understreck kan jämföras enskilt
 
 
         while (lives > 0) {
@@ -44,7 +44,7 @@ public class hangman {
 
 
                 if (wordguess.equals(word)) {
-                    System.out.println("Conrgrats you win!\n" + "The word was " + word);
+                    System.out.println("Congrats you win!\n" + "The word was " + word);
                     System.exit(0);
                 } else {
                     System.out.println("You lose!\n" + "The word was " + word + "\nYou guessed" + wordguess);
@@ -62,7 +62,7 @@ public class hangman {
                     } else {
                     }
                 }
-                //Tittar om bokstaven finns med i ordet och byter ut rätt understräck vid korrekt gissning
+                //Tittar om bokstaven finns med i ordet och byter ut rätt understreck vid korrekt gissning
 
                 if (correct == 0) {
                     lives = lives - 1;
