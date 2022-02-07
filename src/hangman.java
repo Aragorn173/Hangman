@@ -10,6 +10,8 @@ public class hangman {
         int lives = 3;
         int correct = 0;
         char[] letters = new char[word.length()];
+        char[] wrongletters = new char[29 - word.length()];
+        int y = 0;
         //skapar variablerna som kommer behövas
 
 
@@ -37,6 +39,7 @@ public class hangman {
 
         while (lives > 0) {
             System.out.println(underscorelist);
+            System.out.println(wrongletters);
             guess = JOptionPane.showInputDialog("Guess?");
             if (guess.length() > 1) {
                 wordguess = guess;
@@ -44,10 +47,10 @@ public class hangman {
 
 
                 if (wordguess.equals(word)) {
-                    System.out.println("Congrats you win!\n" + "The word was " + word);
+                    System.out.println("Congrats you win!\n" + "The word was: " + word);
                     System.exit(0);
                 } else {
-                    System.out.println("You lose!\n" + "The word was " + word + "\nYou guessed" + wordguess);
+                    System.out.println("You lose!\n" + "The word was: " + word + "\nYou guessed: " + wordguess);
                     System.exit(0);
                 }
                 //Tittar om spelaren har liv kvar och om spelaren har vunnit eller förlorat, sedan avslutar programmet
@@ -67,6 +70,8 @@ public class hangman {
                 if (correct == 0) {
                     lives = lives - 1;
                     System.out.println("The letter you guessed was incorrect\n" + "you have " + lives + " lives remaining");
+                    wrongletters[y] = letterguess;
+                    y++;
                 } else {
                     correct = 0;
                 }
