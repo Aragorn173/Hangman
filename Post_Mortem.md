@@ -1,35 +1,35 @@
-# Titel
+# Hangman
 
-Författare och datum.
+Alvin Liljeström
+2022-02-08
 
 ## Inledning
 
-Här beskriver du kortfattat arbetets syfte/mål, arbetssätt, genomförande.
-
+Syftet med projektet var att skapa ett hangman program genom att koda i java. 
 ## Bakgrund
+Det första som gjordes var en fullständig planering över på vad man ska göra och vilka delar
+som programmet består av. Man tänker vilka funktioner som hangman består av. Du måste kunna läsa in ett
+or på något sätt, du måste kunna gissa på bokstäver och ord och sedan något sätt att se om du har gissat rätt.
 
-Redovisa arbetets olika delar. Så att läsaren förstår vad du gjort och hur.
 
-Använd gärna bilder för att illustrera.
-
-För att lägga till bilder i markdown. Bilderna kan du ladda upp med Git som vanligt, länka dem med url eller filnamnet.
-
-```
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
-```
-
-![NTI Gymnasiet Umeå Logo](https://raw.githubusercontent.com/jensnti/Webbprojekt/master/mallar/nti_logo_white_umea.svg)
+Sedan när man börjar med själva kodningen är det viktigt att fokusera på en del av programmet i taget.
+När jag började koda tittade jag först bara på hur jag ska läsa in ett ord. Sedan efter jag lyckades med det 
+tittade jag vad nästa problem vilket var att skapa understreck för varje bokstav i ordet
+så man vet hur långt ordet ska vara. Sen behövde jag kunna gissa på en bokstav eller ett ord och kunna titta om
+det är rätt eller fel. Till sist måste jag veta om spelaren har vunnit eller förlorat och felaktiga
+bokstavsgissningar hamnar i en lista.
 
 ## Positiva erfarenheter
-
-Här beskriver du vad som har gått bra i ditt projekt och analyserar varför. Hur ska du upprepa framgångarna.
-
+I helhet gick projektet bra och jag lyckades lösa dom flesta problemen utan större svårigheter.
+Efter lite arbete lyckades jag få en tydlig struktur på programmet och slutprodukten fungerar tillräckligt bra.
+Jag hade inga problem med dom mer grundläggande funktionerna som att skapa och hantera variabler.
 ## Negativa erfarenheter
-
-Här beskriver du det som du anser har gått mindre bra med ditt projekt och analyserar hur du kan undvika detta i framtida projekt.
+Jag skrev koden på ett komplicerat sätt vilket gjorde det svårt för mig att förstå vilka delar
+koden gjorde vad fullt ut. Detta beror på bristande planering. Jag borde ha gjort en
+tydligare planering och spenderat mer tid på att tänka ut bättre sätt hur jag ska lösa problemen.
 
 ## Sammanfattning
-
-Här redovisar du dina slutsatser, erfarenheter och lärdomar. Reflektera över din produkt och dess/dina utvecklingsmöjligheter.
-Vad kan vidareutvecklas och finns det utrymme att bygga vidare på projektet.
+I helhet är jag väldigt nöjd med programmet som jag lyckades få fram. Jag hade lite strul för jag använde funktioner 
+som gjorde det mer komplicerat när jag istället kunde använt en funktion som passar bättre för vad som behövde lösas.
+Det finns några problem med programmet som att det går inte vinna om ordet är en bokstav långt.
+Något mer man skulle kunna lägga till är att försöka få fram någon form av grafisk visning av spelets gång.

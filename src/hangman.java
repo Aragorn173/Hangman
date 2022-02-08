@@ -75,7 +75,7 @@ public class hangman {
                 } else {
                     correct = 0;
                 }
-                //Tittar om gissningen är fel och tar bort ett liv vid inkorrekt gissning
+                //Tittar om gissningen är fel och tar bort ett liv vid inkorrekt gissning och lägger till bokstaven i en lista
             }
         }
     }
